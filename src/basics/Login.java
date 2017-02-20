@@ -10,10 +10,10 @@ public class Login {
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Alexandra\\Downloads\\chromedriver_win32\\chromedriver.exe");
 		WebDriver driver=new ChromeDriver();
 		driver.get("http://seek.co.nz");
-		driver.findElement(By.xpath("html/body/div[1]/div/div/header/section/div[1]/div/nav/a[1]")).click();
+		driver.findElement(By.cssSelector(".Tappable-inactive._1D4Y8qE")).click();
 		driver.findElement(By.id("Email")).sendKeys("test.sonca+1@gmail.com");
 		driver.findElement(By.id("Password")).sendKeys("P@ssw0rd");
 		driver.findElement(By.id("RememberMe")).click();
-		driver.findElement(By.xpath("html/body/div[1]/div/div/div/div[2]/div[2]/form/div/button")).click();
+		driver.findElement(By.cssSelector("button.mod-button.state-button-primary")).click();
 	}
 }
